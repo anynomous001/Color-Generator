@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <title></title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <form id="form-holder">
+            <div>
+                <label for="seed-color" id="color-selection">Choose seed color : </label>
+                <input id="seed-color" type="color">
+            </div>
+            <div>
+                <label id="scheme-selection" for="color-mode">Select Any color Scheme: </label>
+                    <select id="color-mode">
+                        <option value="monochrome">Monochrome </option>
+                        <option value="monochrome-dark">Monochrome-dark</option>
+                        <option value="monochrome-light">Monochrome-light</option>
+                        <option value="analogic">Analogic</option>
+                            <option value="complement">Complement</option>
+                            <option value="analogic-complement">Analogic-complement</option>
+                    </select>
+            </div>
+            <button id="scheme-btn">Get Scheme</button>
+        </form>
+        
+        <div id="colorContainer">
+            <!--<div class="color-holder" style="background-color:red"> </div>
+            <div class="color-holder" style="background-color:blue"> </div>
+            <div class="color-holder" style="background-color:skyblue"> </div>
+            <div class="color-holder" style="background-color:teal"> </div>
+            <div class="color-holder" style="background-color:wheat"> </div>
+            <div class="color-holder" style="background-color:whitesmoke"> </div>-->
+        </div>
+        <div id="hexDiv"></div>
+      <p id="click-alert"></p>
+        <script src="index.js"></script>
+    </body>
+</html>
