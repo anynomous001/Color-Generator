@@ -9,6 +9,7 @@ function renderColors(){
     
     let html_1 = ``
     let html_2 = ``
+    
     for(let color of array){
         let hexCode = color.hex.value
        let colorName = color.name.value
@@ -16,15 +17,29 @@ function renderColors(){
         <div class="color-holder" id='colorHolder'style='background-color:${hexCode}'>
         <span class='rotate'>${colorName}</span></div>
         `
+        document.getElementById('heading').style.color = hexCode
     }
-    
+     
     for(let color of array){
-        let hexcode=color.hex.value
+        let hexcode=color.hex.value 
         html_2 += `
         <div class='hexValue'>${hexcode}</div>
         `
     }
-   
+    
+    function formBackgroundColor(){
+          const hexCode = []
+          let random
+          for(let color of array){
+         hexCode.push(color.hex.value)
+         random = Math.floor(Math.random()*6)+1
+    }
+    document.getElementById('form-holder').style.backgroundColor=hexCode[random]
+ }
+  
+    formBackgroundColor()
+    
+    
     document.getElementById('colorContainer').innerHTML = html_1
     document.getElementById('hexDiv').innerHTML = html_2
     
